@@ -1,0 +1,13 @@
+body{
+}
+h1{
+    font-size: large;
+    font-family: sans-serif;
+    color: black;
+}
+h2{
+    font-size: small;
+    font-family: sans-serif;
+    color: gray;
+    font-style: italic;
+}
