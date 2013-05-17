@@ -1,3 +1,9 @@
+/**
+ *
+ * Modified from the tutorial at:
+ * http://keithscode.com/tutorials/javascript/3-a-simple-javascript-password-validator.html
+ * 
+ **/
 function checkPass()
 {
     //Store the password field objects into variables ...
