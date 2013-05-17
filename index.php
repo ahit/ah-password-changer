@@ -93,7 +93,7 @@ else{
         $query->execute();
 
         //send an email alerting the user their password has been changed
-        $to      = 'lyle@asianhope.org';
+        $to      = $username.'@students.logoscambodia.org';
         $subject = 'password change for Asian Hope services';
         $message = 'This is to alert you that the password for '.$username.' has been changed
         If you did not make this request please send an email to it@asianhope.org to report this incident';
