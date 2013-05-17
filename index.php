@@ -60,6 +60,7 @@ You have until <strong>June 2nd</strong> to choose a new password, at which poin
 
 
 ?>
+<br/>
 <input type ="submit" name = "regen" value = "I don't like these ones"/><br/>
 <h1>now, practice your favorite one 3 times:</h1>
 <h2>(this is optional - if you put nothing here, I won't tell)</h2>
