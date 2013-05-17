@@ -92,6 +92,16 @@ else{
         $query = $dbh->prepare($sql);
         $query->execute();
 
+        //send an email alerting the user their password has been changed
+        $to      = 'lyle@asianhope.org';
+        $subject = 'password change for Asian Hope services';
+        $message = 'This is to alert you that the password for $username has been changed\n
+                    If you did not make this request please send an email to <a href = \"mailto:it@asianhope.org\">it@asianhope.org</a>';
+        $headers = 'From: no-reply@opensis.logoscambodia.org' . "\r\n" .
+                   'Reply-To: no-reply@opensis.logoscambodia.org' . "\r\n" .
+                   'X-Mailer: PHP/' . phpversion();
+        mail($to, $subject, $message, $headers);
+
         session_destroy();
     }
     else if($_SESSION['attempts']<3){
