@@ -16,6 +16,18 @@ else
 
 //case first time or want to regenerate passwords
 if(!empty($_POST['regen']) || empty($_POST['submit']) || (empty($_POST['submit']) && empty($_POST['new_pass']))){?>
+<div id = "message">
+<p><strong>It's password changing time!</strong></p>
+<p>Once you change your password on this form the following will happen:
+<ul>
+	<li>your OpenSIS password will be changed <strong>immediately</strong></li>
+	<li>you will get an email confirming that your password has changed</li>
+	<li>your computer logon password will be changed to this password <strong>in the first week of June</strong></li>
+	<li>your email password will be changed to this password <strong>in the first week of June</strong></li>
+</ul>
+You have until <strong>June 2nd</strong> to choose a new password, at which point a random one will be assigned to you</p>
+</div>
+
 <form action = "index.php" method = "post">
 <h1>your username:</h1>
 <input type = "text" name = "username"><br/><br/>
