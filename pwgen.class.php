@@ -384,7 +384,7 @@
 					new PWElement('z', self::CONSONANT)
 				);
 				self::$pw_ambiguous = 'B8G6I1l0OQDS5Z2';
-				self::$pw_symbols = "!#$%&()*+,-./:;=>?@[\\]^_{}~";
+				self::$pw_symbols = "!#$%&()*+,-./:;=>?@[]^_{}~";
 				self::$pw_digits = '0123456789';
 				self::$pw_uppers = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 				self::$pw_lowers = 'abcdefghijklmnopqrstuvwxyz';
