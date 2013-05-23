@@ -15,7 +15,7 @@ else
 
 
 //case first time or want to regenerate passwords
-if(!empty($_POST['regen']) || empty($_POST['submit']) || (empty($_POST['submit']) && empty($_POST['pass_id']))){?>
+if(!empty($_POST['regen']) || empty($_POST['submit']) || empty($_POST['pass_id'])){?>
 <div id = "message">
 <p><strong>It's password changing time!</strong></p>
 <p>Once you change your password on this form the following will happen:
@@ -29,9 +29,27 @@ You have until <strong>June 2nd</strong> to choose a new password, at which poin
 </div>
 
 <form action = "index.php" method = "post">
-<h1>your username:</h1>
-<input type = "text" name = "username"><br/><br/>
+<h1>your username:
+
+<?php
+    if(empty($_POST['username']) && !empty($_POST['submit'])){
+        ?>
+            <strong style = "color: red;">* </strong>
+        <?php
+    }
+?>
+
+</h1>
+<input type = "text" name = "username" value = "<?php if(!empty($_POST['username'])) echo $_POST['username'];?>"><br/><br/>
 <h1>here are some new password options, select one</h1>
+    <?php
+    if(empty($_POST['pass_id']) && !empty($_POST['submit'])){
+        ?>
+            <strong style = "color: red;">Make sure you click the button next to the password!</strong>
+        <?php
+    }
+    ?>
+
 
 <?php
     include('pwgen.class.php');
